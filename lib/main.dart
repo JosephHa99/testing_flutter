@@ -127,10 +127,46 @@ class _MyHomePageState extends State<MyHomePage> {
               child: const Text('Reset Timer'),
               color: Colors.blue,
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondPage()),
+                );
+              },
+              child: const Text('Done'),
+              color: Colors.blueGrey,
+            ),
           ],
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(appBar: AppBar(
+      title: Text('Stopwatch in Seconds'),
+    ),
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+        Text(
+          'Thank You For Using Stopwatch',
+          style: TextStyle(fontSize: 25),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ), 
+      ],)
+    ),
     );
   }
 }
