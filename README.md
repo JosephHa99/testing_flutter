@@ -1,7 +1,6 @@
-# learning_flutter
-
-A new Flutter project.
-
-## Getting Started
+# Seconds Stopwatch Flutter
 
 This project is a basic seconds stopwatch to experiment with flutter.
+
+
+
